@@ -1,0 +1,12 @@
+version: '2'
+services: 
+  web:
+    image: dockernodesample
+    container_name: dockernodesample
+    build: .
+    #volumes: 
+    #  - ./:/usr/src/app
+    ports:
+      - "4000:8080"
+    entrypoint: ['npm', 'run', 'start']
+
